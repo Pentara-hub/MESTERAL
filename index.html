@@ -50,7 +50,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#pricing">Pricing</a></li>
@@ -100,40 +100,47 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+   <section id="about" class="about section light-background">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center gy-5">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo</span></li>
-            </ul>
+      <!-- Image Side -->
+      <div class="col-lg-6 position-relative" data-aos="zoom-in" data-aos-delay="100">
+        <div class="about-img">
+          <img src="assets/img/hero-bg.jpg" alt="Mesteral Pharmaceuticals" class="img-fluid rounded-4 shadow">
+          <div class="about-img-overlay">
+            <img src="assets/img/services.jpg" alt="Production Line" class="img-fluid rounded-3 shadow position-absolute end-0 bottom-0" style="width: 50%; max-width: 200px; transform: translate(20%, 20%);">
           </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-
         </div>
-
       </div>
 
-    </section><!-- /About Section -->
+      <!-- Content Side -->
+      <div class="col-lg-6 content">
+        <h2 class="fw-bold mb-3">Who Are We</h2>
+        <p class="mb-4">
+          Mesteral for Developed Industries L.L.C is a strategic pharmaceutical and industrial powerhouse with headquarters in Cairo and global presence in the UAE, Bulgaria, and Azerbaijan. We integrate innovation, compliance, and growth for international medical brands entering the MENA region.
+        </p>
+        <ul class="list-unstyled">
+          <li class="mb-3 d-flex align-items-start">
+            <i class="bi bi-check-circle-fill text-success fs-5 me-3"></i>
+            <span>Trusted by governments and health authorities across Egypt and the Gulf.</span>
+          </li>
+          <li class="mb-3 d-flex align-items-start">
+            <i class="bi bi-check-circle-fill text-success fs-5 me-3"></i>
+            <span>Exclusive partner for international manufacturers and suppliers.</span>
+          </li>
+          <li class="mb-3 d-flex align-items-start">
+            <i class="bi bi-check-circle-fill text-success fs-5 me-3"></i>
+            <span>Driving pharmaceutical production and industrial innovation across continents.</span>
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-success rounded-pill px-4 py-2 mt-3">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /About Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
