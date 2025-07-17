@@ -784,25 +784,48 @@ section,
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   position: relative;
+  display: inline-block;
+  overflow: hidden; /* Make sure overflow is hidden for animation */
 }
 
-.section-title h2:after {
+/* Base colored line under the title */
+.section-title h2::after {
   content: "";
   position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--accent-color);
-  left: 0;
-  right: 0;
   bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 80px;
+  background-color: var(--accent-color);
+  border-radius: 30px;
+  z-index: 1;
 }
 
-.section-title p {
-  margin-bottom: 0;
-  color: color-mix(in srgb, var(--default-color) 90%, white 50%);
+/* Animated white rounded rectangle */
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -10px; /* Start off-screen */
+  height: 5px;
+  width: 10px;
+  background-color: var(--background-color);
+  border-radius: 0px;
+  animation: line-slide 3s linear infinite;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+/* Animation for white block sliding over the line */
+@keyframes line-slide {
+  0% {
+    left: -10px;
+  }
+  100% {
+    left: 65%;
+  }
 }
 
 /*--------------------------------------------------------------
