@@ -37,8 +37,6 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
     <!-- Boxicons CSS -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -113,25 +111,94 @@
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-        <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" />
+        <div class="swiper init-swiper">
+          <!-- NEW OVERLAY HERE -->
 
-        <div
-          class="container d-flex flex-column align-items-center text-center"
-        >
-          <h2 data-aos="fade-up" data-aos-delay="100">
-            Welcome to Our Website
-          </h2>
-          <p data-aos="fade-up" data-aos-delay="200">
-            We are team of talented designers making websites with Bootstrap
-          </p>
-          <div data-aos="fade-up" data-aos-delay="300">
-            <a
-              href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
-              class="glightbox pulsating-play-btn"
-            ></a>
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="hero-image-wrapper">
+                <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" />
+                <div class="hero-overlay"></div>
+              </div>
+              <div class="swiper-slide-content">
+                <h2 data-aos="fade-up" data-aos-delay="100">
+                  Welcome to Our Website
+                </h2>
+                <p data-aos="fade-up" data-aos-delay="200">
+                  We create amazing digital experiences
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="hero-image-wrapper">
+                <img src="assets/img/cta-bg.jpg" alt="" data-aos="fade-in" />
+                <div class="hero-overlay"></div>
+              </div>
+              <div class="swiper-slide-content">
+                <h2 data-aos="fade-up" data-aos-delay="100">
+                  Innovative Solutions
+                </h2>
+                <p data-aos="fade-up" data-aos-delay="200">
+                  Cutting-edge technology for your business
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="hero-image-wrapper">
+                <img
+                  src="assets/img/features-bg.jpg"
+                  alt=""
+                  data-aos="fade-in"
+                />
+                <div class="hero-overlay"></div>
+              </div>
+              <div class="swiper-slide-content">
+                <h2 data-aos="fade-up" data-aos-delay="100">Creative Team</h2>
+                <p data-aos="fade-up" data-aos-delay="200">
+                  Professional designers at your service
+                </p>
+              </div>
+            </div>
           </div>
+
+          <!-- Navigation arrows -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- Pagination dots -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Swiper config embedded here -->
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "autoplay": {
+                "delay": 5000,
+                "disableOnInteraction": false
+              },
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+              "effect": "slide",
+              "speed": 800,
+              "grabCursor": false,
+              "simulateTouch": false,
+              "allowTouchMove": false
+            }
+          </script>
         </div>
       </section>
+
       <!-- /Hero Section -->
 
       <!-- About Section -->
