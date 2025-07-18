@@ -1,0 +1,149 @@
+
+
+.header {
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.animated-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.animated-line {
+  position: absolute;
+  width: 1.5px;
+  height: 200%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  animation: moveLines 8s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.animated-line:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.animated-line:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.animated-line:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.animated-line:nth-child(4) {
+  left: 70%;
+  animation-delay: 6s;
+}
+
+.animated-line:nth-child(5) {
+  left: 90%;
+  animation-delay: 8s;
+}
+
+@keyframes moveLines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+
+
+
+.hero-animated {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 40% 30%, #007a5e, #002b23);
+  animation: pulseBackground 20s ease-in-out infinite;
+}
+
+@keyframes pulseBackground {
+  0% {
+    background-position: 40% 30%;
+    filter: brightness(1);
+  }
+  50% {
+    background-position: 60% 70%;
+    filter: brightness(1.2);
+  }
+  100% {
+    background-position: 40% 30%;
+    filter: brightness(1);
+  }
+}
+.vision-mission .card-hover {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.vision-mission .card-hover:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 255, 26, 0.2);
+  border: 1px solid rgba(9, 213, 22, 0.2);
+}
+.timeline {
+  position: relative;
+  margin-left: 30px;
+  padding-left: 20px;
+  border-left: 3px solid #0f766e;
+}
+/* 👇 This creates the top extension of the vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: -26px; /* adjust to make line longer upwards */
+  left: -2.5px;
+  width: 2.5px;
+  height: 30px; /* controls the length of top extension */
+  background-color: #0f766e;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -29px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: #0f766e;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #0f766e;
+}
+
+.timeline-content {
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 767px) {
+  .timeline {
+    margin-left: 0;
+    padding-left: 15px;
+  }
+}
