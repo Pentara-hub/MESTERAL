@@ -607,12 +607,10 @@ h6 {
 }
 
 .features-item .icon-box i {
-  font-size: 34px;       /* Slightly larger */
-  margin-top: 20px;        /* Nudges icon downward */
+  font-size: 34px; /* Slightly larger */
+  margin-top: 20px; /* Nudges icon downward */
   line-height: 1;
 }
-
-
 
 .footer .social-links a:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
@@ -1303,6 +1301,9 @@ section,
 .portfolio .portfolio-item {
   position: relative;
   overflow: hidden;
+}
+.portfolio .portfolio-item img {
+  width: 100%;
 }
 
 .portfolio .portfolio-item .portfolio-info {
