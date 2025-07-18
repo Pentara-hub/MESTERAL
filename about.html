@@ -112,7 +112,7 @@
 
 
 <!-- Achievements / Stats -->
-<section class=" py-5 text-white" style="background: #2a7717c7;">
+<section class=" py-5 text-white" style="background: radial-gradient(ellipse at 40% 30%, #007a5e, #014b3d)">
   <div class="container text-center" data-aos="zoom-in">
     <div class="row gy-4">
       <div class="col-md-3">
@@ -183,6 +183,7 @@
 </section>
 
 
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script>
@@ -204,6 +205,17 @@
     });
   });
 </script>
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
 
 </body>
 

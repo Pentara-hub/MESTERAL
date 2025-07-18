@@ -1,3 +1,16 @@
+
+
+.header {
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+
 .animated-bg {
   position: absolute;
   inset: 0;
@@ -9,9 +22,13 @@
   position: absolute;
   width: 1.5px;
   height: 200%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   animation: moveLines 8s linear infinite;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .animated-line:nth-child(1) {
@@ -47,58 +64,9 @@
     transform: translateY(-50%);
   }
 }
-.floating-blob {
-  position: absolute;
-  max-width: 40vw;
-  max-height: 40vh;
-  z-index: 1;
-  opacity: 1;
-  filter: blur(1px);
-  pointer-events: none;
-}
 
-.blob-1 {
-  top: 10%;
-  left: 5%;
-  animation: floatWobble1 12s ease-in-out infinite;
-}
 
-.blob-2 {
-  bottom: 10%;
-  right: 5%;
-  animation: floatWobble2 16s ease-in-out infinite;
-}
 
-.blob-3 {
-  top: 25%;
-  right: 15%;
-  animation: floatWobble3 18s ease-in-out infinite;
-}
-
-/* Advanced motion keyframes */
-@keyframes floatWobble1 {
-  0%   { transform: translateY(0) scale(1); }
-  25%  { transform: translateY(-10px) scale(1.05) rotate(1deg); }
-  50%  { transform: translateY(5px) scale(0.97) rotate(-2deg); }
-  75%  { transform: translateY(-5px) scale(1.03) rotate(1deg); }
-  100% { transform: translateY(0) scale(1); }
-}
-
-@keyframes floatWobble2 {
-  0%   { transform: translateY(0) scale(1); }
-  25%  { transform: translateY(12px) scale(1.08) rotate(-1deg); }
-  50%  { transform: translateY(-8px) scale(0.96) rotate(1.5deg); }
-  75%  { transform: translateY(10px) scale(1.04) rotate(-2deg); }
-  100% { transform: translateY(0) scale(1); }
-}
-
-@keyframes floatWobble3 {
-  0%   { transform: translateY(0) scale(1); }
-  25%  { transform: translateY(-6px) scale(0.98) rotate(1deg); }
-  50%  { transform: translateY(8px) scale(1.06) rotate(-1.5deg); }
-  75%  { transform: translateY(-10px) scale(1.02) rotate(2deg); }
-  100% { transform: translateY(0) scale(1); }
-}
 
 .hero-animated {
   min-height: 100vh;
@@ -128,8 +96,7 @@
 }
 
 .vision-mission .card-hover:hover {
-  
-   transform: translateY(-5px) scale(1.02);
+  transform: translateY(-5px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 255, 26, 0.2);
   border: 1px solid rgba(9, 213, 22, 0.2);
 }
@@ -141,7 +108,7 @@
 }
 /* 👇 This creates the top extension of the vertical line */
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -26px; /* adjust to make line longer upwards */
   left: -2.5px;
