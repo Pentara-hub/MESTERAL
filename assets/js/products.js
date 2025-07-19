@@ -78,7 +78,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const filterMap = {
     all: "All",
-    sutures: "Sutures",
+    sutures: "R1 Sutures",
     orthopedic: "Orthopedic Implants",
     syringes: "Safety Syringes",
     telemedicine: "Telemedicine Devices",

@@ -1,6 +1,6 @@
 const productSections = [
   {
-    title: "Sutures",
+    title: "R1 Sutures",
     products: [
       {
         name: "PGA",
@@ -11,14 +11,14 @@ const productSections = [
       {
         name: "Lactisorb",
         description: `Synthetic absorbable surgical suture <br> Coated & Braided Polyglactin 910`,
-        pdfLink: "assets/pdfs/Lactisorb.pdf",
-        image: "assets/img/Suture/Lactisorb.jpg",
+        pdfLink: "assets/pdfs/LACTISORB.pdf",
+        image: "assets/img/Suture/LACTISORB.jpg",
       },
       {
         name: "Lactisorb Rapid",
         description: ` Synthetic absorbable surgical suture <br> Coated & Braided Poliglactin 910`,
         pdfLink: "assets/pdfs/LACTISORB-RAPID.pdf",
-        image: "assets/img/Suture/Lactisorb_Rapid.jpg",
+        image: "assets/img/Suture/LACTISORB_Rapid.jpg",
       },
       {
         name: "PDO",
@@ -30,7 +30,7 @@ const productSections = [
         name: "Monoquick",
         description: `Synthetic absorbable surgical suture <br> Monofilament Poliglecaprone 25`,
         pdfLink: "assets/pdfs/MONOQUICK.pdf",
-        image: "assets/img/Suture/MONOQUICK.jpg",
+        image: "assets/img/Suture/MonoQUICK.jpg",
       },
       {
         name: "Polypropylene",
@@ -53,14 +53,14 @@ const productSections = [
       {
         name: "Polyester-S",
         description: `Non-absorbable surgical suture <br> coated & Braited Polyester`,
-        pdfLink: "assets/pdfs/Polyester-S.pdf",
-        image: "assets/img/Suture/Polyester-S.jpg",
+        pdfLink: "assets/pdfs/POLYESTER-S.pdf",
+        image: "assets/img/Suture/POLYESTER-S.jpg",
       },
       {
         name: "Polyester-CV",
         description: `Non-absorbable surgical suture <br> PTFE coated & Braided Polyester`,
-        pdfLink: "assets/pdfs/Polyester-CV.pdf",
-        image: "assets/img/Suture/Polyester-CV.jpg",
+        pdfLink: "assets/pdfs/POLYESTER-CV.pdf",
+        image: "assets/img/Suture/POLYESTER-CV.jpg",
       },
       {
         name: "PTFE",
@@ -270,12 +270,6 @@ function renderCards(filteredSutures) {
 
 window.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
-
-  // const suturesSection = productSections.find(
-  //   (section) => section.title === "Sutures"
-  // );
-  // const sutures = suturesSection ? suturesSection.products : [];
-  // renderCards(sutures);
 
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
