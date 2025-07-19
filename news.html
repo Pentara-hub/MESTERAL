@@ -275,35 +275,111 @@
       <!-- /Blog Posts Section -->
     </main>
 
-    <footer id="footer" class="footer dark-background">
+    <footer
+      id="footer"
+      class="footer dark-background"
+      style="padding: 40px 20px; background-color: #333; color: #fff"
+    >
+      <style>
+        .footer .sitename {
+          font-size: 24px;
+          margin-bottom: 15px;
+          color: #fff;
+          font-weight: bold;
+        }
+
+        .footer i {
+          color: #ffffff;
+          margin-right: 10px;
+        }
+
+        .footer a {
+          color: #ffffff;
+          text-decoration: none;
+          margin: 0 10px;
+        }
+
+        .footer a:hover {
+          text-decoration: underline;
+        }
+
+        .footer p {
+          margin-bottom: 10px;
+        }
+
+        .footer-nav {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .footer-nav a {
+          display: inline-block;
+        }
+
+        @media (max-width: 767px) {
+          .footer .text-md-end {
+            text-align: center !important;
+            margin-top: 30px;
+          }
+
+          .footer .col-md-6 {
+            text-align: center;
+          }
+
+          .footer-nav a {
+            display: block;
+            margin: 5px 0;
+          }
+        }
+      </style>
+
       <div class="container">
-        <h3 class="sitename">KnightOne</h3>
-        <p>
-          Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
-          eligendi fuga maxime saepe commodi placeat.
-        </p>
-        <div class="social-links d-flex justify-content-center">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-skype"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+        <!-- Centered Site Name -->
+        <div class="row">
+          <div class="col-12 text-center">
+            <h3 class="sitename">Mesteral</h3>
+
+            <!-- Navigation Links -->
+            <div class="footer-nav">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="#services">Services</a>
+              <a href="#products">Products</a>
+              <a href="index.html#portfolio">Gallery</a>
+              <a href="blog.html">News</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
         </div>
-        <div class="container">
-          <div class="copyright">
-            <span>Copyright</span>
-            <strong class="px-1 sitename">KnightOne</strong>
-            <span>All Rights Reserved</span>
+
+        <div class="row">
+          <!-- Left Column: Call & Email -->
+          <div class="col-md-6">
+            <p>
+              <i class="fas fa-phone-alt"></i><strong>Call Us:</strong> +20 2
+              22691478
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i><strong>Email Us:</strong>
+              <a href="mailto:tamer.cm@pharmacia-biotech.com"
+                >tamer.cm@pharmacia-biotech.com</a
+              >
+            </p>
           </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you've purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-            Designed by
-            <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed
-            by <a href=“https://themewagon.com>ThemeWagon
+
+          <!-- Right Column: Address -->
+          <div class="col-md-6 text-md-end">
+            <p>
+              <i class="fas fa-map-marker-alt"></i><strong>Address:</strong
+              ><br />
+              11 Khalid Ibn Al-Waleed, Masaken Sheraton, Cairo, Egypt
+            </p>
           </div>
+        </div>
+        <hr <!-- Copyright -- />
+        <div class="text-center mt-4">
+          <p>Copyright Mesteral | All Rights Reserved</p>
+          <p>Developed By Pentara-hub</p>
         </div>
       </div>
     </footer>
