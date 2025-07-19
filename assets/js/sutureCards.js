@@ -161,7 +161,7 @@ const productSections = [
         3ml
 
         5ml`,
-        image: "assets/img/Safety-Syringes/Safety-Syringes.png",
+        image: "assets/img/Safety-Syringes/Safety-Syringes.jpg",
       },
     ],
   },
@@ -173,7 +173,7 @@ const productSections = [
         description: `<strong> Military/Defense </strong>
         <br>
         Fully Portable and Integrated Military Tested Telemedicine System Designed For “Rugged” Use Applications`,
-        image: "assets/img/Telemedicine/Lifebot-5.png",
+        image: "assets/img/Telemedicine/Lifebot-5.jpg",
       },
       {
         name: "Lifebot 6",
@@ -253,7 +253,7 @@ function renderCards(filteredSutures) {
 
     col.innerHTML = `
       <div class="card h-100">
-        <img src="${suture.image}" alt="${suture.name}" class="suture-thumb" />
+        <img src="${suture.image}" alt="${suture.name}" class="product-thumb" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${suture.name}</h5>
           <p class="card-text flex-grow-1">${suture.description}</p>
