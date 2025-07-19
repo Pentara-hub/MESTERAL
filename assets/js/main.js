@@ -254,6 +254,79 @@
       }
     });
   }
+  
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await res.json();
+      alert(data.message);
+    } catch (err) {
+      alert("An error occurred while sending the message.");
+    }
+  });
+document
+  .querySelector("#contact-form")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = this;
+
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value,
+    };
+
+    document.querySelector(".loading").style.display = "block";
+    document.querySelector(".error-message").style.display = "none";
+    document.querySelector(".sent-message").style.display = "none";
+
+    try {
+      const res = await fetch("http://localhost:3000/forms/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        document.querySelector(".sent-message").style.display = "block";
+        form.reset();
+      } else {
+        document.querySelector(".error-message").innerText = data.message;
+        document.querySelector(".error-message").style.display = "block";
+      }
+    } catch (err) {
+      document.querySelector(".error-message").innerText =
+        "An unexpected error occurred.";
+      document.querySelector(".error-message").style.display = "block";
+    } finally {
+      document.querySelector(".loading").style.display = "none";
+    }
+  });
+
+
+
+
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 })();
+
+const grid = document.getElementById("product-grid");
