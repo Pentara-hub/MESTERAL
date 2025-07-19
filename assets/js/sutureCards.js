@@ -271,11 +271,11 @@ function renderCards(filteredSutures) {
 window.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
 
-  const suturesSection = productSections.find(
-    (section) => section.title === "Sutures"
-  );
-  const sutures = suturesSection ? suturesSection.products : [];
-  renderCards(sutures);
+  // const suturesSection = productSections.find(
+  //   (section) => section.title === "Sutures"
+  // );
+  // const sutures = suturesSection ? suturesSection.products : [];
+  // renderCards(sutures);
 
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
