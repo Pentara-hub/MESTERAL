@@ -2692,7 +2692,7 @@ section,
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #1e2a38;
+  color: #e2e6ea;
 }
 
 /* Description */
@@ -2771,7 +2771,7 @@ section,
   content: "";
   width: 60px;
   height: 4px;
-  background: #00b06f;
+  background: #00B4D8;
   display: block;
   margin: 8px auto 0;
   border-radius: 2px;
@@ -2785,19 +2785,20 @@ section,
 }
 
 .filter-btn {
-  background-color: #f3f3f3;
+  background-color: #00B4D8;
+  margin-top: 1%;
   border: none;
-  border-radius: 30px;
+  border-radius: 17px;
   padding: 8px 18px;
   font-weight: 600;
-  color: #009961;
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-  background-color: #009961;
+  background-color: #0077B6;
   color: white;
-  box-shadow: 0 4px 12px rgba(0, 153, 97, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.4);
 }

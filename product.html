@@ -33,12 +33,12 @@
         <h1 class="sitename">MESTERAL</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu data-aos">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="about.html" >About</a></li>
           <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#products">Products</a></li>
+          <li><a href="product.html" class="active">Products</a></li>
           <li><a href="index.html#portfolio">Gallery</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="index.html#contact">Contact Us</a></li>
@@ -49,12 +49,12 @@
   </header>
 
   <!-- Main Content -->
-  <main class="mt-5 pt-5">
+  <main class="mt-5 pt-5 ">
     <div class="container">
       
 
       <!-- Filter Buttons -->
-      <div class="filter-buttons text-center mb-4">
+      <div class="filter-buttons text-center mb-4" data-aos="fade-up">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="sutures">Sutures</button>
         <button class="filter-btn" data-filter="orthopedic">Orthopedic Implants</button>
@@ -65,7 +65,7 @@
       </div>
 
       <!-- Search -->
-      <div class="search-container">
+      <div class="search-container data-aos" data-aos="fade-up " data-aos-delay="300">
         <div class="search-wrapper">
           <input type="text" id="searchInput" class="form-control" placeholder="Search by name, description..." />
           <i class="bi bi-search search-icon"></i>
@@ -73,7 +73,7 @@
       </div>
 
       <!-- Product Grid -->
-      <div id="product-grid" class="row mt-5"></div>
+      <div id="product-grid" class="row mt-5 data-aos" data-aos="fade-up " data-aos-delay="600"></div>
     </div>
   </main>
 
@@ -316,6 +316,13 @@
     }
   });
 </script>
+<script>
+      AOS.init({
+        duration: 1500,
+        easing: "ease-in-out-cubic",
+        once: true,
+      });
+    </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
