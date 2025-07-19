@@ -328,3 +328,5 @@ document
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 })();
+
+const grid = document.getElementById("product-grid");
