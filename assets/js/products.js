@@ -16,10 +16,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
       section.products.forEach((product) => {
         const col = document.createElement("div");
-        col.className = "col-md-6 col-lg-4";
+        col.className = "col-md-6 col-lg-4 mb-4";
 
         col.innerHTML = `
-          <div class="card h-100">
+          <div class="product-card h-100">
             <img src="${product.image}" alt="${
           product.name
         }" class="product-thumb" />
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
               <p class="card-text flex-grow-1">${product.description}</p>
               ${
                 product.pdfLink
-                  ? `<button class="btn btn-primary mt-3 view-pdf-btn"
+                  ? `<button class="product-btn mt-3 view-pdf-btn"
                       data-bs-toggle="modal"
                       data-bs-target="#pdfModal"
                       data-pdf="${product.pdfLink}"
@@ -47,6 +47,15 @@ window.addEventListener("DOMContentLoaded", () => {
       grid.appendChild(sectionWrapper);
     });
   }
+
+  document.addEventListener("click", function (e) {
+    if (e.target && e.target.classList.contains("view-pdf-btn")) {
+      const pdfUrl = e.target.getAttribute("data-pdf");
+      document.getElementById("pdfFrame").src = pdfUrl;
+      const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
+      modal.show();
+    }
+  });
 
   function filterProducts(query) {
     const filtered = productSections
@@ -102,4 +111,15 @@ window.addEventListener("DOMContentLoaded", () => {
       filterProducts(query);
     });
   }
+
+  // Fix lingering overlay/backdrop issues after closing modal
+  const pdfModalEl = document.getElementById("pdfModal");
+
+  pdfModalEl.addEventListener("hidden.bs.modal", () => {
+    document.getElementById("pdfFrame").src = "";
+    document.body.classList.remove("modal-open");
+    document.body.style.overflow = "";
+    const backdrop = document.querySelector(".modal-backdrop");
+    if (backdrop) backdrop.remove();
+  });
 });

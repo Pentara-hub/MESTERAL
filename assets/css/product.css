@@ -188,3 +188,63 @@ body {
 .suture-card .card-actions button:hover {
   background-color: #17b57f;
 }
+/* Updated product card styling */
+.product-card {
+  background-color: #10876b;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #f1f5f9;
+  border: none;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-card .card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-card .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.product-card .card-text {
+  font-size: 14px;
+  flex-grow: 1;
+  color: #cbd5e1;
+}
+
+.product-card .product-btn {
+  margin-top: 15px;
+  align-self: flex-start;
+  background-color: #1acc8d;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .product-btn:hover {
+  background-color: #0f9d73;
+}
