@@ -92,6 +92,27 @@
           <!-- Search Input with icon -->
           <div class="search-container">
             <div class="search-wrapper">
+              <div class="filter-buttons text-center mb-4">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="sutures">
+                  Sutures
+                </button>
+                <button class="filter-btn" data-filter="orthopedic">
+                  Orthopedic Implants
+                </button>
+                <button class="filter-btn" data-filter="syringes">
+                  Safety Syringes
+                </button>
+                <button class="filter-btn" data-filter="telemedicine">
+                  Telemedicine Devices
+                </button>
+                <button class="filter-btn" data-filter="dental">
+                  Dental Anesthetics
+                </button>
+                <button class="filter-btn" data-filter="supplies">
+                  Medical Supplies
+                </button>
+              </div>
               <input
                 type="text"
                 id="searchInput"
@@ -103,7 +124,7 @@
           </div>
         </div>
 
-        <div id="suture-grid" class="row gy-4"></div>
+        <div id="product-grid" class="product-grid-wrapper"></div>
       </div>
     </main>
 
