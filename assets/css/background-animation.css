@@ -72,7 +72,7 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(ellipse at 40% 30%, #007a5e, #002b23);
+  background: radial-gradient(ellipse at 40% 30%, #0077B6, #002b23);
   animation: pulseBackground 20s ease-in-out infinite;
 }
 
@@ -124,8 +124,8 @@ box-shadow:
 
 .vision-mission .card-hover:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 255, 26, 0.2);
-  border: 1px solid rgba(9, 213, 22, 0.2);
+  box-shadow: 0 20px 40px rgba(41, 202, 227, 0.2);
+  border: 1px solid rgba(9, 142, 213, 0.2);
 }
 .timeline {
   position: relative;
@@ -141,7 +141,7 @@ box-shadow:
   left: -2.5px;
   width: 2.5px;
   height: 30px; /* controls the length of top extension */
-  background-color: #0f766e;
+  background-color: #00B4D8;
 }
 .timeline-item {
   position: relative;
@@ -158,7 +158,7 @@ box-shadow:
   background: #0f766e;
   border-radius: 50%;
   border: 2px solid white;
-  box-shadow: 0 0 0 2px #0f766e;
+  box-shadow: 0 0 0 2px #00B4D8;
 }
 
 .timeline-content {
