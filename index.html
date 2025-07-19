@@ -1317,16 +1317,15 @@
       </section>
       <!-- /Contact Section -->
     </main>
-
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <footer id="footer" class="footer dark-background" style="padding: 40px 20px; background-color: #333; color: #fff;">
   <style>
     .footer .sitename {
       font-size: 24px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      color: #fff;
+      font-weight: bold;
     }
 
     .footer i {
@@ -1336,11 +1335,25 @@
 
     .footer a {
       color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
       text-decoration: underline;
     }
 
     .footer p {
       margin-bottom: 10px;
+    }
+
+    .footer-nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav a {
+      display: inline-block;
     }
 
     @media (max-width: 767px) {
@@ -1352,6 +1365,11 @@
       .footer .col-md-6 {
         text-align: center;
       }
+
+      .footer-nav a {
+        display: block;
+        margin: 5px 0;
+      }
     }
   </style>
 
@@ -1360,6 +1378,17 @@
     <div class="row">
       <div class="col-12 text-center">
         <h3 class="sitename">Mesteral</h3>
+
+        <!-- Navigation Links -->
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
     </div>
 
@@ -1378,14 +1407,15 @@
         11 Khalid Ibn Al-Waleed, Masaken Sheraton, Cairo, Egypt</p>
       </div>
     </div>
-
+    <hr
     <!-- Copyright -->
     <div class="text-center mt-4">
-      <p>Copyright Mesteral  All Rights Reserved</p>
+      <p>Copyright Mesteral | All Rights Reserved</p>
       <p>Developed By Pentara-hub</p>
     </div>
   </div>
 </footer>
+
     <a
       href="#"
       id="scroll-top"
