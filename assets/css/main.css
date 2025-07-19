@@ -2802,3 +2802,33 @@ section,
   color: white;
   box-shadow: 0 4px 12px rgba(0, 119, 182, 0.4);
 }
+.supplies-img-wrapper {
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.supplies-img {
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(20, 180, 180, 0.311), 0 0 30px rgba(5, 139, 137, 0.1);
+  transform-style: preserve-3d;
+  transform: rotateY(-10deg) rotateX(5deg);
+  animation: float3D 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.supplies-img:hover {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.03);
+}
+@keyframes float3D {
+  0% {
+    transform: rotateY(-10deg) rotateX(5deg) translateY(0);
+  }
+  50% {
+    transform: rotateY(-5deg) rotateX(8deg) translateY(-10px);
+  }
+  100% {
+    transform: rotateY(-10deg) rotateX(5deg) translateY(0);
+  }
+}
