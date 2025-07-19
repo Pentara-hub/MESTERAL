@@ -63,7 +63,7 @@
       <div class="pill-2-shape pill-3 fade-up"></div>
       <div class="pill-shape pill-4 fade-up"></div>
       <div class="container" data-aos="fade-up">
-        <h1 class="display-4 fw-bold">About Mesteral</h1>
+        <h1 class="display-4 fw-bold text-white">About Mesteral</h1>
         <p class="lead mt-3">
           Shaping the Future of Pharmaceuticals and Industrial Excellence
         </p>
@@ -137,7 +137,7 @@
     <!-- Achievements / Stats -->
     <section
       class="py-5 text-white"
-      style="background: radial-gradient(ellipse at 40% 30%, #007a5e, #014b3d)"
+      style="background: radial-gradient(ellipse at 40% 30%, #0077b6, #00b4d8)"
     >
       <div class="container text-center" data-aos="zoom-in">
         <div class="row gy-4">
@@ -231,108 +231,204 @@
     <footer
       id="footer"
       class="footer dark-background"
-      style="padding: 40px 20px; background-color: #333; color: #fff"
+      style="background-color: #222; color: #fff; padding: 60px 20px 30px"
     >
       <style>
-        .footer .sitename {
-          font-size: 24px;
-          margin-bottom: 15px;
+        .footer {
+          font-family: Arial, sans-serif;
+        }
+
+        .footer .site-name {
+          font-size: 30px;
+          font-weight: 700;
+          margin-bottom: 20px;
+          color: #ffffff;
+        }
+
+        .footer .nav-links {
+          margin-bottom: 30px;
+        }
+
+        .footer .nav-links ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+          margin: 0;
+        }
+
+        .footer .nav-links a {
           color: #fff;
-          font-weight: bold;
-        }
-
-        .footer i {
-          color: #ffffff;
-          margin-right: 10px;
-        }
-
-        .footer a {
-          color: #ffffff;
           text-decoration: none;
-          margin: 0 10px;
+          font-weight: 500;
+          transition: color 0.3s ease;
         }
 
-        .footer a:hover {
+        .footer .nav-links a:hover {
           text-decoration: underline;
         }
 
-        .footer p {
-          margin-bottom: 10px;
+        .footer .info-section {
+          margin-top: 30px;
         }
 
-        .footer-nav {
-          text-align: center;
+        .footer .info-block {
           margin-bottom: 20px;
         }
 
-        .footer-nav a {
-          display: inline-block;
+        .footer i {
+          margin-right: 8px;
+          color: #f0f0f0;
         }
 
-        @media (max-width: 767px) {
-          .footer .text-md-end {
-            text-align: center !important;
-            margin-top: 30px;
+        .footer address,
+        .footer p {
+          font-size: 14px;
+          margin: 5px 0;
+        }
+
+        .footer hr {
+          border-top: 1px solid #444;
+          margin: 40px 0 20px;
+        }
+
+        .footer .copyright {
+          font-size: 13px;
+          opacity: 0.75;
+        }
+
+        @media (max-width: 768px) {
+          .footer .nav-links ul {
+            flex-direction: column;
+            align-items: center;
           }
 
-          .footer .col-md-6 {
+          .footer .info-section {
             text-align: center;
           }
 
-          .footer-nav a {
-            display: block;
-            margin: 5px 0;
+          .footer .info-block {
+            margin-bottom: 25px;
           }
         }
       </style>
 
-      <div class="container">
-        <!-- Centered Site Name -->
-        <div class="row">
-          <div class="col-12 text-center">
-            <h3 class="sitename">Mesteral</h3>
+      <div class="container text-center col-lg-14">
+        <!-- Branding -->
+        <a class="logo" href="index.html">
+          <h2 class="sitename" style="margin-bottom: 32px">Mesteral</h2>
+        </a>
+        <!-- Navigation -->
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a class="logo" href="index.html" style="text-decoration: none"
+                ><span class="sitename">Home</span></a
+              >
+            </li>
 
-            <!-- Navigation Links -->
-            <div class="footer-nav">
-              <a href="index.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="#services">Services</a>
-              <a href="#products">Products</a>
-              <a href="index.html#portfolio">Gallery</a>
-              <a href="blog.html">News</a>
-              <a href="#contact">Contact</a>
+            <li>
+              <a class="logo" href="about.html" style="text-decoration: none"
+                ><span class="sitename">About</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="logo"
+                href="index.html#services"
+                style="text-decoration: none"
+                ><span class="sitename">Services</span></a
+              >
+            </li>
+            <li>
+              <a class="logo" href="#products" style="text-decoration: none"
+                ><span class="sitename">Products</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="logo"
+                href="index.html#portfolio"
+                style="text-decoration: none"
+                ><span class="sitename">Gallery</span></a
+              >
+            </li>
+            <li>
+              <a class="logo" href="news.html" style="text-decoration: none"
+                ><span class="sitename">News</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="logo"
+                href="index.html#contact"
+                style="text-decoration: none"
+                ><span class="sitename">Contact Us</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Info Section -->
+        <div
+          class="row info-section justify-content-center text-white py-5"
+          style="background-color: #222"
+        >
+          <div class="col-11 col-md-10 col-lg-8">
+            <div class="row g-4">
+              <!-- Phone -->
+              <div
+                class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center align-items-md-start text-center text-md-start"
+              >
+                <i class="fas fa-phone-alt fa-lg mb-2 me-md-3 text-primary"></i>
+                <div>
+                  <h6 class="mb-2 fw-bold">Call Us</h6>
+                  <p class="mb-0">+20 2 22691478</p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div
+                class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center align-items-md-start text-center text-md-start"
+              >
+                <i class="fas fa-envelope fa-lg mb-2 me-md-3 text-primary"></i>
+                <div>
+                  <h6 class="mb-2 fw-bold">Email</h6>
+                  <p class="mb-0">
+                    <a
+                      href="mailto:tamer.cm@pharmacia-biotech.com"
+                      class="text-white text-decoration-none"
+                    >
+                      tamer.cm@pharmacia-biotech.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div
+                class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center align-items-md-start text-center text-md-start"
+              >
+                <i
+                  class="fas fa-map-marker-alt fa-lg mb-2 me-md-3 text-primary"
+                ></i>
+                <div>
+                  <h6 class="mb-2 fw-bold">Address</h6>
+                  <p class="mb-0">
+                    11 Khalid Ibn Al-Waleed, Masaken Sheraton, Cairo, Egypt
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <!-- Left Column: Call & Email -->
-          <div class="col-md-6">
-            <p>
-              <i class="fas fa-phone-alt"></i><strong>Call Us:</strong> +20 2
-              22691478
-            </p>
-            <p>
-              <i class="fas fa-envelope"></i><strong>Email Us:</strong>
-              <a href="mailto:tamer.cm@pharmacia-biotech.com"
-                >tamer.cm@pharmacia-biotech.com</a
-              >
-            </p>
-          </div>
-
-          <!-- Right Column: Address -->
-          <div class="col-md-6 text-md-end">
-            <p>
-              <i class="fas fa-map-marker-alt"></i><strong>Address:</strong
-              ><br />
-              11 Khalid Ibn Al-Waleed, Masaken Sheraton, Cairo, Egypt
-            </p>
-          </div>
-        </div>
-        <hr <!-- Copyright -- />
-        <div class="text-center mt-4">
-          <p>Copyright Mesteral | All Rights Reserved</p>
-          <p>Developed By Pentara-hub</p>
+        <!-- Copyright -->
+        <div class="copyright text-center">
+          <p>&copy; Mesteral. All rights reserved.</p>
+          <p>Developed by Pentara-hub</p>
         </div>
       </div>
     </footer>
