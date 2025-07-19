@@ -20,10 +20,23 @@ window.addEventListener("DOMContentLoaded", () => {
 
         col.innerHTML = `
           <div class="card h-100">
-            <img src="${product.image}" alt="${product.name}" class="product-thumb" />
+            <img src="${product.image}" alt="${
+          product.name
+        }" class="product-thumb" />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">${product.name}</h5>
               <p class="card-text flex-grow-1">${product.description}</p>
+              ${
+                product.pdfLink
+                  ? `<button class="btn btn-primary mt-3 view-pdf-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#pdfModal"
+                      data-pdf="${product.pdfLink}"
+                      data-name="${product.name}">
+                      View PDF
+                    </button>`
+                  : ""
+              }
             </div>
           </div>
         `;

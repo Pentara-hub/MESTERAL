@@ -244,7 +244,7 @@ const productSections = [
 ];
 
 function renderCards(filteredSutures) {
-  const grid = document.getElementById("suture-grid");
+  const grid = document.getElementById("product-grid");
   grid.innerHTML = "";
 
   filteredSutures.forEach((suture) => {
@@ -270,7 +270,12 @@ function renderCards(filteredSutures) {
 
 window.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
-  renderCards(sutures); // initial render
+
+  const suturesSection = productSections.find(
+    (section) => section.title === "Sutures"
+  );
+  const sutures = suturesSection ? suturesSection.products : [];
+  renderCards(sutures);
 
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
