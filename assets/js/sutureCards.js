@@ -300,21 +300,22 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("click", function (e) {
-  if (e.target && e.target.classList.contains("view-pdf-btn")) {
-    const pdfUrl = e.target.getAttribute("data-pdf");
+document.addEventListener("DOMContentLoaded", function () {
+  const viewButtons = document.querySelectorAll(".view-pdf-btn");
 
-    // Detect mobile devices (iOS or Android)
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  viewButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const pdfUrl = this.getAttribute("data-pdf");
 
-    if (isMobile) {
-      // On mobile, open the PDF in a new tab
-      window.open(pdfUrl, "_blank");
-    } else {
-      // On desktop, show in modal using <embed>
-      document.getElementById("pdfFrame").src = pdfUrl;
-      const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
-      modal.show();
-    }
-  }
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        window.open(pdfUrl, "_blank");
+      } else {
+        document.getElementById("pdfFrame").src = pdfUrl;
+        const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
+        modal.show();
+      }
+    });
+  });
 });
