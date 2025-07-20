@@ -304,14 +304,13 @@ window.addEventListener("DOMContentLoaded", () => {
 //   if (e.target && e.target.classList.contains("view-pdf-btn")) {
 //     const pdfUrl = e.target.getAttribute("data-pdf");
 
-//     // Detect mobile devices (iOS or Android)
-//     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+//     const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
 
 //     if (isMobile) {
-//       // On mobile, open the PDF in a new tab
+//       // Open in new tab on mobile
 //       window.open(pdfUrl, "_blank");
 //     } else {
-//       // On desktop, show in modal using <embed>
+//       // Show modal on desktop
 //       document.getElementById("pdfFrame").src = pdfUrl;
 //       const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
 //       modal.show();
@@ -322,17 +321,29 @@ window.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("click", function (e) {
   if (e.target && e.target.classList.contains("view-pdf-btn")) {
     const pdfUrl = e.target.getAttribute("data-pdf");
+    const productName = e.target.getAttribute("data-name");
 
-    const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
+    // Check if it's a mobile device
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
 
     if (isMobile) {
-      // Open in new tab on mobile
+      // On mobile, only open in new tab
       window.open(pdfUrl, "_blank");
     } else {
-      // Show modal on desktop
+      // On desktop, show modal
       document.getElementById("pdfFrame").src = pdfUrl;
+      document.querySelector(
+        "#pdfModal .modal-title"
+      ).textContent = `${productName} - Product Details`;
       const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
       modal.show();
     }
+
+    // Prevent default behavior and stop propagation
+    e.preventDefault();
+    e.stopPropagation();
   }
 });
