@@ -304,13 +304,14 @@ document.addEventListener("click", function (e) {
   if (e.target && e.target.classList.contains("view-pdf-btn")) {
     const pdfUrl = e.target.getAttribute("data-pdf");
 
-    // Check if the device is iPhone
-    const isIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    // Detect mobile devices (iOS or Android)
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    if (isIphone) {
-      // Open in a new tab (fullscreen experience)
+    if (isMobile) {
+      // On mobile, open the PDF in a new tab
       window.open(pdfUrl, "_blank");
     } else {
+      // On desktop, show in modal using <embed>
       document.getElementById("pdfFrame").src = pdfUrl;
       const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
       modal.show();
