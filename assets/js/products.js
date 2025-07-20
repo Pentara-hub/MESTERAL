@@ -29,8 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
               ${
                 product.pdfLink
                   ? `<button class="product-btn mt-3 view-pdf-btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#pdfModal"
+                      
                       data-pdf="${product.pdfLink}"
                       data-name="${product.name}">
                       View PDF
@@ -47,15 +46,6 @@ window.addEventListener("DOMContentLoaded", () => {
       grid.appendChild(sectionWrapper);
     });
   }
-
-  document.addEventListener("click", function (e) {
-    if (e.target && e.target.classList.contains("view-pdf-btn")) {
-      const pdfUrl = e.target.getAttribute("data-pdf");
-      document.getElementById("pdfFrame").src = pdfUrl;
-      const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
-      modal.show();
-    }
-  });
 
   function filterProducts(query) {
     const filtered = productSections
@@ -78,7 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const filterMap = {
     all: "All",
-    sutures: "Sutures",
+    sutures: "R1 Sutures",
     orthopedic: "Orthopedic Implants",
     syringes: "Safety Syringes",
     telemedicine: "Telemedicine Devices",

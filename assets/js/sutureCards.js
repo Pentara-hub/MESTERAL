@@ -1,6 +1,6 @@
 const productSections = [
   {
-    title: "Sutures",
+    title: "R1 Sutures",
     products: [
       {
         name: "PGA",
@@ -11,14 +11,14 @@ const productSections = [
       {
         name: "Lactisorb",
         description: `Synthetic absorbable surgical suture <br> Coated & Braided Polyglactin 910`,
-        pdfLink: "assets/pdfs/Lactisorb.pdf",
-        image: "assets/img/Suture/Lactisorb.jpg",
+        pdfLink: "assets/pdfs/LACTISORB.pdf",
+        image: "assets/img/Suture/LACTISORB.jpg",
       },
       {
         name: "Lactisorb Rapid",
         description: ` Synthetic absorbable surgical suture <br> Coated & Braided Poliglactin 910`,
         pdfLink: "assets/pdfs/LACTISORB-RAPID.pdf",
-        image: "assets/img/Suture/Lactisorb_Rapid.jpg",
+        image: "assets/img/Suture/LACTISORB_Rapid.jpg",
       },
       {
         name: "PDO",
@@ -30,7 +30,7 @@ const productSections = [
         name: "Monoquick",
         description: `Synthetic absorbable surgical suture <br> Monofilament Poliglecaprone 25`,
         pdfLink: "assets/pdfs/MONOQUICK.pdf",
-        image: "assets/img/Suture/MONOQUICK.jpg",
+        image: "assets/img/Suture/MonoQUICK.jpg",
       },
       {
         name: "Polypropylene",
@@ -53,14 +53,14 @@ const productSections = [
       {
         name: "Polyester-S",
         description: `Non-absorbable surgical suture <br> coated & Braited Polyester`,
-        pdfLink: "assets/pdfs/Polyester-S.pdf",
-        image: "assets/img/Suture/Polyester-S.jpg",
+        pdfLink: "assets/pdfs/POLYESTER-S.pdf",
+        image: "assets/img/Suture/POLYESTER-S.jpg",
       },
       {
         name: "Polyester-CV",
         description: `Non-absorbable surgical suture <br> PTFE coated & Braided Polyester`,
-        pdfLink: "assets/pdfs/Polyester-CV.pdf",
-        image: "assets/img/Suture/Polyester-CV.jpg",
+        pdfLink: "assets/pdfs/POLYESTER-CV.pdf",
+        image: "assets/img/Suture/POLYESTER-CV.jpg",
       },
       {
         name: "PTFE",
@@ -161,7 +161,7 @@ const productSections = [
         3ml
 
         5ml`,
-        image: "assets/img/Safety-Syringes/Safety-Syringes.png",
+        image: "assets/img/Safety-Syringes/Safety-Syringes.jpg",
       },
     ],
   },
@@ -173,7 +173,7 @@ const productSections = [
         description: `<strong> Military/Defense </strong>
         <br>
         Fully Portable and Integrated Military Tested Telemedicine System Designed For “Rugged” Use Applications`,
-        image: "assets/img/Telemedicine/Lifebot-5.png",
+        image: "assets/img/Telemedicine/Lifebot-5.jpg",
       },
       {
         name: "Lifebot 6",
@@ -253,11 +253,11 @@ function renderCards(filteredSutures) {
 
     col.innerHTML = `
       <div class="card h-100">
-        <img src="${suture.image}" alt="${suture.name}" class="suture-thumb" />
+        <img src="${suture.image}" alt="${suture.name}" class="product-thumb" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${suture.name}</h5>
           <p class="card-text flex-grow-1">${suture.description}</p>
-          <button class="btn btn-primary mt-3" data-pdf="${suture.pdfLink}" data-name="${suture.name}" data-bs-toggle="modal" data-bs-target="#pdfModal">
+          <button class="btn btn-primary mt-3" data-pdf="${suture.pdfLink}" data-name="${suture.name}">
             View PDF
           </button>
         </div>
@@ -270,12 +270,6 @@ function renderCards(filteredSutures) {
 
 window.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
-
-  // const suturesSection = productSections.find(
-  //   (section) => section.title === "Sutures"
-  // );
-  // const sutures = suturesSection ? suturesSection.products : [];
-  // renderCards(sutures);
 
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
@@ -304,4 +298,52 @@ window.addEventListener("DOMContentLoaded", () => {
   pdfModal.addEventListener("hidden.bs.modal", () => {
     pdfFrame.src = "";
   });
+});
+
+// document.addEventListener("click", function (e) {
+//   if (e.target && e.target.classList.contains("view-pdf-btn")) {
+//     const pdfUrl = e.target.getAttribute("data-pdf");
+
+//     const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
+
+//     if (isMobile) {
+//       // Open in new tab on mobile
+//       window.open(pdfUrl, "_blank");
+//     } else {
+//       // Show modal on desktop
+//       document.getElementById("pdfFrame").src = pdfUrl;
+//       const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
+//       modal.show();
+//     }
+//   }
+// });
+
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.classList.contains("view-pdf-btn")) {
+    const pdfUrl = e.target.getAttribute("data-pdf");
+    const productName = e.target.getAttribute("data-name");
+
+    // Check if it's a mobile device
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    if (isMobile) {
+      // On mobile, only open in new tab
+      window.open(pdfUrl, "_blank");
+    } else {
+      // On desktop, show modal
+      document.getElementById("pdfFrame").src = pdfUrl;
+      document.querySelector(
+        "#pdfModal .modal-title"
+      ).textContent = `${productName} - Product Details`;
+      const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
+      modal.show();
+    }
+
+    // Prevent default behavior and stop propagation
+    e.preventDefault();
+    e.stopPropagation();
+  }
 });

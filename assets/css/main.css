@@ -1,11 +1,3 @@
-/**
-* Template Name: KnightOne
-* Template URL: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/
-* Updated: Oct 16 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
@@ -24,7 +16,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #282828; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #00B4D8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #00b4d8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -32,11 +24,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff; /* The default color of the main navmenu links */
-  --nav-hover-color: #00B4D8; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #00b4d8; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #009961; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #00B4D8; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -68,13 +60,11 @@ body {
   font-family: var(--default-font);
 }
 
-
 /* Change color of MESTERAL logo on hover */
 .logo .sitename:hover {
-  color: #00B4D8 !important;
+  color: #00b4d8 !important;
   transition: color 0.7s ease;
 }
-
 
 a {
   color: var(--accent-color);
@@ -2581,12 +2571,12 @@ section,
   border: 3px solid #fff;
 }
 .about-hero {
-  background: linear-gradient(135deg, #009961 0%, #004d40 100%);
+  background: linear-gradient(135deg, #00B4D8 0%, #004d40 100%);
   position: relative;
   color: white;
   overflow: hidden;
   min-height: 100vh;
-  background: linear-gradient(135deg, #009961, #004d40);
+  background: linear-gradient(135deg, #00B4D8, #004d40);
 }
 
 .bg-shapes::before,
@@ -2771,7 +2761,7 @@ section,
   content: "";
   width: 60px;
   height: 4px;
-  background: #00B4D8;
+  background: #00b4d8;
   display: block;
   margin: 8px auto 0;
   border-radius: 2px;
@@ -2785,7 +2775,7 @@ section,
 }
 
 .filter-btn {
-  background-color: #00B4D8;
+  background-color: #00b4d8;
   margin-top: 1%;
   border: none;
   border-radius: 17px;
@@ -2798,7 +2788,7 @@ section,
 
 .filter-btn:hover,
 .filter-btn.active {
-  background-color: #0077B6;
+  background-color: #0077b6;
   color: white;
   box-shadow: 0 4px 12px rgba(0, 119, 182, 0.4);
 }
@@ -2811,7 +2801,8 @@ section,
   width: 80%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(20, 180, 180, 0.311), 0 0 30px rgba(5, 139, 137, 0.1);
+  box-shadow: 0 20px 40px rgba(20, 180, 180, 0.311),
+    0 0 30px rgba(5, 139, 137, 0.1);
   transform-style: preserve-3d;
   transform: rotateY(-10deg) rotateX(5deg);
   animation: float3D 6s ease-in-out infinite;
