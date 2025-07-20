@@ -47,15 +47,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  document.addEventListener("click", function (e) {
-    if (e.target && e.target.classList.contains("view-pdf-btn")) {
-      const pdfUrl = e.target.getAttribute("data-pdf");
-      document.getElementById("pdfFrame").src = pdfUrl;
-      const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
-      modal.show();
-    }
-  });
-
   function filterProducts(query) {
     const filtered = productSections
       .map((section) => ({
