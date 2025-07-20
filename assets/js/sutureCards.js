@@ -299,3 +299,21 @@ window.addEventListener("DOMContentLoaded", () => {
     pdfFrame.src = "";
   });
 });
+
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.classList.contains("view-pdf-btn")) {
+    const pdfUrl = e.target.getAttribute("data-pdf");
+
+    // Check if the device is iPhone
+    const isIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isIphone) {
+      // Open in a new tab (fullscreen experience)
+      window.open(pdfUrl, "_blank");
+    } else {
+      document.getElementById("pdfFrame").src = pdfUrl;
+      const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
+      modal.show();
+    }
+  }
+});
