@@ -29,8 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
               ${
                 product.pdfLink
                   ? `<button class="product-btn mt-3 view-pdf-btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#pdfModal"
+                      
                       data-pdf="${product.pdfLink}"
                       data-name="${product.name}">
                       View PDF
