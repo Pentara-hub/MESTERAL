@@ -257,7 +257,7 @@ function renderCards(filteredSutures) {
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${suture.name}</h5>
           <p class="card-text flex-grow-1">${suture.description}</p>
-          <button class="btn btn-primary mt-3" data-pdf="${suture.pdfLink}" data-name="${suture.name}" data-bs-toggle="modal" data-bs-target="#pdfModal">
+          <button class="btn btn-primary mt-3" data-pdf="${suture.pdfLink}" data-name="${suture.name}">
             View PDF
           </button>
         </div>
