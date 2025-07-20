@@ -5,7 +5,7 @@ This repository contains the complete source code for the Mesteral Company Websi
 The website is designed to professionally represent Mesteral's brand, services, and products. It includes clean UI/UX design, mobile responsiveness, and modern animations. The site is built with scalability and performance in mind, and includes a working contact form integration.
 
 🌍 Live Preview
-https://mesteral.vercel.app/home.html
+https://mesteral.vercel.app/
 
 📁 Included Sections
 Home – Company introduction and highlights
