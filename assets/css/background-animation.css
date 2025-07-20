@@ -114,6 +114,33 @@
     transform: rotateY(-10deg) rotateX(5deg) translateY(0);
   }
 }
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.scroll-down-indicator .arrow {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(-45deg);
+  animation: bounce 2s infinite;
+  opacity: 0.8;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+}
 
 .vision-mission .card-hover {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -129,7 +156,7 @@
   position: relative;
   margin-left: 30px;
   padding-left: 20px;
-  border-left: 3px solid #0f766e;
+  border-left: 3px solid #00b4d8;
 }
 
 /* Top extension of the vertical line */
@@ -155,7 +182,7 @@
   top: 4px;
   width: 16px;
   height: 16px;
-  background: #0f766e;
+  background: #00b4d8;
   border-radius: 50%;
   border: 2px solid white;
   box-shadow: 0 0 0 2px #00b4d8;
@@ -177,7 +204,7 @@
   }
 
   .timeline::before {
-    left: -1.9px;
+    left: -1px;
     width: 2px;
   }
 
@@ -185,7 +212,7 @@
     left: -22.8px;
     width: 14px;
     height: 14px;
-    box-shadow: 0 0 0 1.5px #0f766e;
+    box-shadow: 0 0 0 1.5px #00b4d8;
   }
 
   .timeline-content {
