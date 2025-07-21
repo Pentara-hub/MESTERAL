@@ -22,6 +22,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   </head>
 
   <body>
@@ -232,214 +234,67 @@
       </div>
     </section>
 
-    <footer
-      id="footer"
-      class="footer dark-background"
-      style="background-color: #222; color: #fff; padding: 35px 20px 30px"
-    >
-      <style>
-        .footer {
-          font-family: Arial, sans-serif;
-        }
+     <footer class="footer text-white" style="background-color: #1d1d1d; padding: 50px 20px 30px">
+  <div class="container text-center">
+    
+    <!-- Branding -->
+    <a href="index.html" class="d-block mb-4 text-decoration-none">
+      <h2 class="fw-bold text-white">Mesteral</h2>
+    </a>
 
-        .footer .site-name {
-          font-size: 30px;
-          font-weight: 700;
-          margin-bottom: 20px;
-          color: #ffffff;
-        }
+    <!-- Navigation -->
+    <ul class="nav justify-content-center mb-4 flex-wrap gap-3">
+      <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white-50" href="about.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link text-white-50" href="index.html#services">Services</a></li>
+      <li class="nav-item"><a class="nav-link text-white-50" href="product.html">Products</a></li>
+      <li class="nav-item"><a class="nav-link text-white-50" href="index.html#portfolio">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link text-white-50" href="news.html">News</a></li>
+      <li class="nav-item"><a class="nav-link text-white-50" href="index.html#contact">Contact Us</a></li>
+    </ul>
 
-        .footer .nav-links {
-          margin-bottom: 30px;
-        }
-
-        .footer .nav-links ul {
-          list-style: none;
-          padding: 0;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 45px;
-          margin: 0;
-        }
-
-        .footer .nav-links a {
-          color: #fff;
-          text-decoration: none;
-          font-weight: 500;
-          transition: color 0.3s ease;
-        }
-
-        .footer .nav-links a:hover {
-          text-decoration: underline;
-        }
-
-        .footer .info-section {
-          margin-top: 30px;
-        }
-
-        .footer .info-block {
-          margin-bottom: 20px;
-        }
-
-        .footer i {
-          margin-right: 8px;
-          color: #f0f0f0;
-        }
-
-        .footer address,
-        .footer p {
-          font-size: 14px;
-          margin: 5px 0;
-        }
-
-        .footer hr {
-          border-top: 1px solid #444;
-          margin: 40px 0 20px;
-        }
-
-        .footer .copyright {
-          font-size: 13px;
-          opacity: 0.75;
-        }
-
-        @media (max-width: 768px) {
-          .footer .nav-links ul {
-            flex-direction: column;
-            align-items: center;
-          }
-
-          .footer .info-section {
-            text-align: center;
-          }
-
-          .footer .info-block {
-            margin-bottom: 25px;
-          }
-        }
-      </style>
-
-      <div class="container text-center col-lg-14">
-        <!-- Branding -->
-        <a class="logo" href="index.html">
-          <h2 class="sitename" style="margin-bottom: 40px">Mesteral</h2>
-        </a>
-        <!-- Navigation -->
-        <div class="nav-links">
-          <ul>
-            <li>
-              <a class="logo" href="index.html" style="text-decoration: none"
-                ><span class="sitename">Home</span></a
-              >
-            </li>
-
-            <li>
-              <a class="logo" href="about.html" style="text-decoration: none"
-                ><span class="sitename">About Us</span></a
-              >
-            </li>
-            <li>
-              <a
-                class="logo"
-                href="index.html#services"
-                style="text-decoration: none"
-                ><span class="sitename">Services</span></a
-              >
-            </li>
-            <li>
-              <a class="logo" href="product.html" style="text-decoration: none"
-                ><span class="sitename">Products</span></a
-              >
-            </li>
-            <li>
-              <a
-                class="logo"
-                href="index.html#portfolio"
-                style="text-decoration: none"
-                ><span class="sitename">Gallery</span></a
-              >
-            </li>
-            <li>
-              <a class="logo" href="news.html" style="text-decoration: none"
-                ><span class="sitename">News</span></a
-              >
-            </li>
-            <li>
-              <a
-                class="logo"
-                href="index.html#contact"
-                style="text-decoration: none"
-                ><span class="sitename">Contact Us</span></a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <!-- Info Section -->
-        <div
-          class="row info-section justify-content-center text-white py-3"
-          style="background-color: #222"
-        >
-          <div class="col-11 col-md-10 col-lg-8">
-            <div class="row g-4">
-              <!-- Phone -->
-              <div
-                class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center align-items-md-start text-center text-md-start"
-              >
-                <div>
-                  <a
-                    href="tel:+20222691478"
-                    style="text-decoration: none; color: inherit"
-                  >
-                    <h6 class="mb-2 fw-bold">Call Us</h6>
-                    <p class="mb-0">+20 222 691 478</p>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Email -->
-              <div
-                class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center align-items-md-start text-center text-md-start"
-              >
-                <i class="fas fa-envelope fa-lg mb-2 me-md-3 text-primary"></i>
-                <div>
-                  <h6 class="mb-2 fw-bold">Email</h6>
-                  <p class="mb-0">
-                    <a
-                      href="mailto:tamer.cm@pharmacia-biotech.com"
-                      class="text-white text-decoration-none"
-                    >
-                      tamer.cm@pharmacia-biotech.com
-                    </a>
-                  </p>
-                </div>
-              </div>
-
-              <!-- Address -->
-              <div
-                class="col-12 col-md-4 d-flex flex-column flex-md-row align-items-center align-items-md-start text-center text-md-start"
-              >
-                <i
-                  class="fas fa-map-marker-alt fa-lg mb-2 me-md-3 text-primary"
-                ></i>
-                <div>
-                  <h6 class="mb-2 fw-bold">Address</h6>
-                  <p class="mb-0">
-                    11 Khalid Ibn Al-Waleed, Masaken Sheraton, Cairo, Egypt
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="copyright text-center">
-          <p>&copy; Mesteral. All rights reserved.</p>
-          <p>Developed by Pentara-hub</p>
-        </div>
+    <!-- Info Section -->
+    <div class="row justify-content-center text-start text-md-center mb-4">
+      <!-- Phone -->
+      <div class="col-12 col-md-4 mb-3">
+        <i class="bi bi-telephone-fill me-2"></i>
+        <strong>Call Us:</strong>
+        <a href="tel:+20222691478" class="text-white-50 d-block mt-1">+20 222 691 478</a>
       </div>
-    </footer>
+
+      <!-- Email -->
+      <div class="col-12 col-md-4 mb-3">
+        <i class="bi bi-envelope-fill me-2"></i>
+        <strong>Email:</strong>
+        <a href="mailto:tamer.cm@pharmacia-biotech.com" class="text-white-50 d-block mt-1">
+          tamer.cm@pharmacia-biotech.com
+        </a>
+      </div>
+
+      <!-- Address -->
+      <div class="col-12 col-md-4 mb-3">
+        <i class="bi bi-geo-alt-fill me-2"></i>
+        <strong>Address:</strong>
+        <p class="text-white-50 mt-1 mb-0">
+          11 Khalid Ibn Al-Waleed, Masaken Sheraton, Cairo, Egypt
+        </p>
+      </div>
+    </div>
+
+    <hr style="border-top: 1px solid #444" class="my-4" />
+
+    <!-- Footer Bottom -->
+   <div class="text-center small text-white-50">
+  <p class="mb-1">
+    &copy; <span id="year"></span>
+   
+    Mesteral. All rights reserved.
+  </p>
+  <p class="mb-0">Developed by Pentara-hub  <img src="assets/img/our logo.png" alt="Mesteral Logo" style="height: 18px; vertical-align: middle; margin: 0 6px 3px 4px;"></p>
+</div>
+
+  </div>
+</footer>
 
     <!-- Scroll Top -->
     <a

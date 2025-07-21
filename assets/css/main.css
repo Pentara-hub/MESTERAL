@@ -2848,3 +2848,19 @@ section,
     transform: rotateY(-10deg) rotateX(5deg) translateY(0);
   }
 }
+.footer .nav-link {
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.footer .nav-link:hover  {
+  color: #00b4d8 !important;
+}
+
+.footer i {
+  color: #00b4d8;
+  font-size: 1.2rem;
+}
+
+
+
