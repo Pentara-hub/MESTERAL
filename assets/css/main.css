@@ -59,8 +59,16 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
+h2.sitename{
+  color:white;
+  font-weight: bolder;
+}
+h2.sitename:hover{
+ color: #00b4d8 !important;
+  transition: color 0.7s ease;
 
-/* Change color of MESTERAL logo on hover */
+}
+/* Change color of MISTERAL logo on hover */
 .logo .sitename:hover {
   color: #00b4d8 !important;
   transition: color 0.7s ease;
@@ -2860,6 +2868,11 @@ section,
 .footer i {
   color: #00b4d8;
   font-size: 1.2rem;
+}
+
+.footer-h2:hover{
+  color: #00b4d8 !important;
+
 }
 
 .scroll-down-indicator {
