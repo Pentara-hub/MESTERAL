@@ -1,12 +1,11 @@
 {
   "rewrites": [
-    { "source": "/About Us", "destination": "/about.html" },
-    { "source": "/News", "destination": "/news.html" },
-    { "source": "/Contact Us", "destination": "/index.html#contact" },
-    { "source": "/Services", "destination": "/services.html" },
-    { "source": "/Home", "destination": "/index.html" },
-    { "source": "/Services", "destination": "/index.html#services" },
-    { "source": "/Gallery", "destination": "/index.html#portfolio" },
-    { "source": "/Products", "destination": "/product.html" }
+    { "source": "/home", "destination": "/" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/news", "destination": "/news.html" },
+    { "source": "/contact", "destination": "/index.html#contact" },
+    { "source": "/services", "destination": "/index.html#services" },
+    { "source": "/gallery", "destination": "/index.html#portfolio" },
+    { "source": "/products", "destination": "/product.html" }
   ]
 }
