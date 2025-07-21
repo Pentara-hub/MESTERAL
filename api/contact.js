@@ -1,8 +1,12 @@
-const express = require("express");
 const nodemailer = require("nodemailer");
-const router = express.Router();
 
-router.post("/", async (req, res) => {
+module.exports = async (req, res) => {
+  if (req.method !== "POST") {
+    return res
+      .status(405)
+      .json({ success: false, message: "Method not allowed" });
+  }
+
   const { name, email, subject, message } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -25,8 +29,6 @@ router.post("/", async (req, res) => {
   } catch (err) {
     res
       .status(500)
-      .json({ success: false, message: "Email failed", error: err });
+      .json({ success: false, message: "Email failed", error: err.message });
   }
-});
-
-module.exports = router;
+};

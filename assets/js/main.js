@@ -270,7 +270,7 @@ document
     }
   });
 document
-  .querySelector("#contact-form")
+  .getElementById("contact-form")
   .addEventListener("submit", async function (e) {
     e.preventDefault();
 
@@ -283,12 +283,13 @@ document
       message: form.message.value,
     };
 
+    // Show loading state
     document.querySelector(".loading").style.display = "block";
     document.querySelector(".error-message").style.display = "none";
     document.querySelector(".sent-message").style.display = "none";
 
     try {
-      const res = await fetch("http://localhost:3000/forms/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -313,6 +314,7 @@ document
       document.querySelector(".loading").style.display = "none";
     }
   });
+
 
 
 
