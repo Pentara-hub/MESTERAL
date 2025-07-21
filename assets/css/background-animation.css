@@ -177,7 +177,7 @@
 
 .timeline-dot {
   position: absolute;
-  left: -26.5px; /* Default desktop */
+  left: -26px; /* Default desktop */
   top: 40px;
   width: 16px;
   height: 16px;
