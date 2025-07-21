@@ -974,6 +974,27 @@ section,
   width: 100%;
   height: 100%;
 }
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .hero p {
+    display: none !important; /* Ensures paragraphs are hidden on small screens */
+  }
+
+  .hero .swiper-button-prev,
+  .hero .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero .swiper-button-prev::after,
+  .hero .swiper-button-next::after {
+    font-size: 18px;
+  }
+}
 
 /*--------------------------------------------------------------
 # About Section
@@ -2792,10 +2813,7 @@ section,
   color: white;
   box-shadow: 0 4px 12px rgba(0, 119, 182, 0.4);
 }
-.supplies-img-wrapper {
-  perspective: 1000px;
-  display: inline-block;
-}
+
 
 .supplies-img {
   width: 80%;
@@ -2807,6 +2825,13 @@ section,
   transform: rotateY(-10deg) rotateX(5deg);
   animation: float3D 6s ease-in-out infinite;
   transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .supplies-img {
+     display: block;
+    margin: 0 auto;
+    width: 85% !important;
+  }
 }
 
 .supplies-img:hover {
