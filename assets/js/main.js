@@ -1,5 +1,25 @@
 (function () {
-  "use strict";
+  ("use strict");
+  // Scroll to section if path is /services, /contact, or /gallery
+  window.addEventListener("DOMContentLoaded", function () {
+    const path = window.location.pathname;
+
+    const sectionMap = {
+      "/services": "#services",
+      "/contact": "#contact",
+      "/gallery": "#portfolio",
+    };
+
+    if (sectionMap[path]) {
+      // Wait a bit for the DOM and styles to load
+      setTimeout(() => {
+        const section = document.querySelector(sectionMap[path]);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300);
+    }
+  });
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
@@ -246,56 +266,52 @@
       }
     });
   }
-  
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", async function (e) {
-    e.preventDefault();
 
-    const form = this;
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      subject: form.subject.value,
-      message: form.message.value,
-    };
+      const form = this;
 
-    // Show loading state
-    document.querySelector(".loading").style.display = "block";
-    document.querySelector(".error-message").style.display = "none";
-    document.querySelector(".sent-message").style.display = "none";
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value,
+      };
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      // Show loading state
+      document.querySelector(".loading").style.display = "block";
+      document.querySelector(".error-message").style.display = "none";
+      document.querySelector(".sent-message").style.display = "none";
 
-      const data = await res.json();
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
 
-      if (data.success) {
-        document.querySelector(".sent-message").style.display = "block";
-        form.reset();
-      } else {
-        document.querySelector(".error-message").innerText = data.message;
+        const data = await res.json();
+
+        if (data.success) {
+          document.querySelector(".sent-message").style.display = "block";
+          form.reset();
+        } else {
+          document.querySelector(".error-message").innerText = data.message;
+          document.querySelector(".error-message").style.display = "block";
+        }
+      } catch (err) {
+        document.querySelector(".error-message").innerText =
+          "An unexpected error occurred.";
         document.querySelector(".error-message").style.display = "block";
+      } finally {
+        document.querySelector(".loading").style.display = "none";
       }
-    } catch (err) {
-      document.querySelector(".error-message").innerText =
-        "An unexpected error occurred.";
-      document.querySelector(".error-message").style.display = "block";
-    } finally {
-      document.querySelector(".loading").style.display = "none";
-    }
-  });
-
-
-
-
+    });
 
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
