@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/About Us", "destination": "/about.html" },
+    { "source": "/News", "destination": "/news.html" },
+    { "source": "/Contact Us", "destination": "/index.html#contact" },
+    { "source": "/Services", "destination": "/services.html" },
+    { "source": "/Home", "destination": "/index.html" },
+    { "source": "/Services", "destination": "/index.html#services" },
+    { "source": "/Gallery", "destination": "/index.html#portfolio" },
+    { "source": "/Products", "destination": "/product.html" }
+  ]
+}
